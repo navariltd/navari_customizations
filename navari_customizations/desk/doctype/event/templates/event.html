@@ -1,0 +1,31 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<h1 class = "font-size-5xl">{{ title }}</h1>
+
+<p class = "hero-subtitle">{{ starts_on }}</p>
+
+<div class = "ql-editor read-mode">
+    <p>{{ description }}</p>
+</div>
+
+<a class="btn btn-primary" href = "https://navari.navari.co.ke/event-registration/">Register</a>
+<button class="btn btn-secondary">Download ics file</button>
+<button class="btn btn-secondary">Add event to calendar</button>
+
+<div class="row">
+	       
+    <div class="mt-4 col-6 col-sm-4 col-lg-2 text-center">
+        <img class = "card card-md w-100 speaker-image" alt = "Event speaker image" src = "{{ speaker }}">
+        <h6 class="speaker-name mt-2">{{ speaker_name }}</h6>
+        <p class="text-muted speaker-designation" style="font-size: 0.875rem">
+            {{ speaker_title }}
+            <br />
+            {{ speaker_company }}
+        </p>
+    </div>
+
+</div>
+
+{% endblock %}
