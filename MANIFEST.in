@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include navari_customizations *.css
+recursive-include navari_customizations *.csv
+recursive-include navari_customizations *.html
+recursive-include navari_customizations *.ico
+recursive-include navari_customizations *.js
+recursive-include navari_customizations *.json
+recursive-include navari_customizations *.md
+recursive-include navari_customizations *.png
+recursive-include navari_customizations *.py
+recursive-include navari_customizations *.svg
+recursive-include navari_customizations *.txt
+recursive-exclude navari_customizations *.pyc
