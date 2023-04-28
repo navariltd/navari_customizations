@@ -4,7 +4,7 @@
 
 <h1 class = "font-size-5xl">{{ title }}</h1>
 
-<p class = "hero-subtitle">{{ starts_on }}</p>
+<p class="hero-subtitle">{{ starts_on }}</p>
 
 <div class = "ql-editor read-mode">
     <p>{{ description }}</p>
@@ -31,6 +31,7 @@
 
 <script>
     function addEventToGoogleCalendar(title, meeting_link, startDateTime, endDateTime) {
+        console.log(startDateTime)
         let linkTag = '<a href="' + meeting_link + '">' + meeting_link + '</a>'
         let startDateObj = new Date(startDateTime)
 
