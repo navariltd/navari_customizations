@@ -536,8 +536,5 @@
    "value": null
   }
  ],
- "has_web_view": 1,
- "is_published_field": "is_published",
- "route": "route",
  "sync_on_migrate": 1
 }

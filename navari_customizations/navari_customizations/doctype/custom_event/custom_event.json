@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "autoname": "NAV_EV_#####",
+ "creation": "2023-04-28 14:04:37.717414",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "event_category",
+  "event_type",
+  "event_location",
+  "meeting_link",
+  "column_break_dzc3u",
+  "starts_on",
+  "ends_on",
+  "status",
+  "section_break_rhyz0",
+  "description",
+  "speakers_details_section",
+  "speaker",
+  "speaker_name",
+  "speaker_title",
+  "speaker_company",
+  "section_break_rzsok",
+  "route",
+  "is_published"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_category",
+   "fieldtype": "Select",
+   "label": "Event Category",
+   "options": "Meeting\nCall\nSent/Received Email\nOther"
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Event Type",
+   "options": "Private\nPublic\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_location",
+   "fieldtype": "Data",
+   "label": "Event Location"
+  },
+  {
+   "fieldname": "meeting_link",
+   "fieldtype": "Data",
+   "label": "Meeting Link"
+  },
+  {
+   "fieldname": "column_break_dzc3u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "starts_on",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Starts on",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ends_on",
+   "fieldtype": "Datetime",
+   "label": "Ends on"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nCompleted\nClosed"
+  },
+  {
+   "fieldname": "speakers_details_section",
+   "fieldtype": "Section Break",
+   "label": "Speaker's Details"
+  },
+  {
+   "fieldname": "speaker",
+   "fieldtype": "Attach Image",
+   "label": "Speaker"
+  },
+  {
+   "fieldname": "speaker_name",
+   "fieldtype": "Data",
+   "label": "Speaker Name"
+  },
+  {
+   "fieldname": "speaker_title",
+   "fieldtype": "Data",
+   "label": "Speaker Title"
+  },
+  {
+   "fieldname": "speaker_company",
+   "fieldtype": "Data",
+   "label": "Speaker Company"
+  },
+  {
+   "fieldname": "section_break_rzsok",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "section_break_rhyz0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  }
+ ],
+ "has_web_view": 1,
+ "is_published_field": "is_published",
+ "links": [],
+ "modified": "2023-04-28 14:31:16.054710",
+ "modified_by": "Administrator",
+ "module": "Navari Customizations",
+ "name": "Custom Event",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "route",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "subject"
+}
