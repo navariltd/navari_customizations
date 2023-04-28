@@ -11,8 +11,8 @@
 </div>
 
 <a class="btn btn-primary" href = "https://navari.navari.co.ke/event-registration/">Register</a>
-<button class="btn btn-secondary" onclick = "createICS( '{{ starts_on }}', '{{ ends_on }}', '{{ subject }}', 'This is our event')">Download ics file</button>
-<button class="btn btn-secondary" onclick = "addEventToGoogleCalendar('{{ subject }}', 'This is our event', '{{ starts_on }}', '{{ ends_on }}');
+<button class="btn btn-secondary" onclick = "createICS( '{{ starts_on }}', '{{ ends_on }}', '{{ subject }}', '{{ meeting_link }}')">Download ics file</button>
+<button class="btn btn-secondary" onclick = "addEventToGoogleCalendar('{{ subject }}', '{{ meeting_link }}', '{{ starts_on }}', '{{ ends_on }}');
 ">Add event to calendar</button>
 
 <div class="row">
@@ -30,7 +30,8 @@
 </div>
 
 <script>
-    function addEventToGoogleCalendar(title, description, startDateTime, endDateTime) {
+    function addEventToGoogleCalendar(title, meeting_link, startDateTime, endDateTime) {
+        let linkTag = '<a href="' + meeting_link + '">' + meeting_link + '</a>'
         let startDateObj = new Date(startDateTime)
 
         let start = formatTime(startDateObj)
@@ -47,7 +48,7 @@
         const params = new URLSearchParams({
             action: 'TEMPLATE',
             text: title,
-            details: description,
+            details: linkTag,
             dates: `${start}/${end}`
         })
 
@@ -60,7 +61,7 @@
         return date.toISOString().replace(/-|:|\.\d+/g, '')
     };
 
-    function createICS(startDateTime, endDateTime, title, description) {
+    function createICS(startDateTime, endDateTime, title, meeting_link) {
         let startDateObj = new Date(startDateTime)
 
         let start = formatTime(startDateObj)
@@ -73,6 +74,8 @@
             end = calculateEndTime(startDateObj)
         }
 
+        let linkTag = '<a href="' + meeting_link + '">' + meeting_link + '</a>'
+
         let icsString = 
             "BEGIN:VCALENDAR\n" +
             "VERSION:2.0\n" +
@@ -80,7 +83,7 @@
             "DTSTART:" + start + "\n" +
             "DTEND:" + end + "\n" +
             "SUMMARY:" + title + "\n" +
-            "DESCRIPTION:" + description + "\n" +
+            "DESCRIPTION:" + linkTag + "\n" +
             "END:VEVENT\n" +
             "END:VCALENDAR\n"
 
