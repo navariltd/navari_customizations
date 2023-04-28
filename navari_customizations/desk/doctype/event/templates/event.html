@@ -11,8 +11,9 @@
 </div>
 
 <a class="btn btn-primary" href = "https://navari.navari.co.ke/event-registration/">Register</a>
-<button class="btn btn-secondary">Download ics file</button>
-<button class="btn btn-secondary">Add event to calendar</button>
+<button class="btn btn-secondary" onclick = "createICS( '{{ starts_on }}', '{{ ends_on }}', '{{ subject }}', 'This is our event')">Download ics file</button>
+<button class="btn btn-secondary" onclick = "addEventToGoogleCalendar('{{ subject }}', 'This is our event', '{{ starts_on }}', '{{ ends_on }}');
+">Add event to calendar</button>
 
 <div class="row">
 	       
@@ -28,4 +29,80 @@
 
 </div>
 
+<script>
+    function addEventToGoogleCalendar(title, description, startDateTime, endDateTime) {
+        let startDateObj = new Date(startDateTime)
+
+        let start = formatTime(startDateObj)
+        let end = ''
+    
+        if (endDateTime != 'None') {
+            let endDateObj = new Date(endDateTime)
+            end = formatTime(endDateObj)
+        } else {
+            // event end time is not provided, default to one hour.
+            end = calculateEndTime(startDateObj)
+        }
+        
+        const params = new URLSearchParams({
+            action: 'TEMPLATE',
+            text: title,
+            details: description,
+            dates: `${start}/${end}`
+        })
+
+        const link = `https://www.google.com/calendar/render?${params}`
+
+        window.open(link)
+    }
+
+    function formatTime(date) {
+        return date.toISOString().replace(/-|:|\.\d+/g, '')
+    };
+
+    function createICS(startDateTime, endDateTime, title, description) {
+        let startDateObj = new Date(startDateTime)
+
+        let start = formatTime(startDateObj)
+        let end = ''
+
+        if (endDateTime != 'None') {
+            let endDateObj = new Date(endDateTime)
+            end = formatTime(endDateObj)
+        } else {
+            end = calculateEndTime(startDateObj)
+        }
+
+        let icsString = 
+            "BEGIN:VCALENDAR\n" +
+            "VERSION:2.0\n" +
+            "BEGIN:VEVENT\n" +
+            "DTSTART:" + start + "\n" +
+            "DTEND:" + end + "\n" +
+            "SUMMARY:" + title + "\n" +
+            "DESCRIPTION:" + description + "\n" +
+            "END:VEVENT\n" +
+            "END:VCALENDAR\n"
+
+        let blob = new Blob([icsString], {type: "text/calendar;charset=utf-8"})
+        let url = URL.createObjectURL(blob)
+
+        // Download the file
+        let link = document.createElement("a")
+        link.setAttribute("href", url)
+        link.setAttribute("download", title + ".ics")
+        link.style.display = "none"
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+    }
+
+    function calculateEndTime(startTime) {
+        // no of mins * MS_IN_MINUTES converts them to milisecs
+        var MS_IN_MINUTES = 60 * 1000;
+
+        return formatTime(new Date(startTime.getTime() + (60 * MS_IN_MINUTES)))
+    };
+
+</script>
 {% endblock %}
