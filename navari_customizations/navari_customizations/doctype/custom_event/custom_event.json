@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_guest_to_view": 1,
+ "allow_rename": 1,
  "autoname": "NAV_EV_#####",
  "creation": "2023-04-28 14:04:37.717414",
  "default_view": "List",
@@ -135,7 +136,7 @@
  "has_web_view": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2023-04-28 14:31:16.054710",
+ "modified": "2023-05-01 10:02:48.059949",
  "modified_by": "Administrator",
  "module": "Navari Customizations",
  "name": "Custom Event",
