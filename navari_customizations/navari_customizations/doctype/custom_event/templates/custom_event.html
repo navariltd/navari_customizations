@@ -11,8 +11,8 @@
 </div>
 
 <a class="btn btn-primary" href = "https://navari.navari.co.ke/event-registration/">Register</a>
-<button class="btn btn-secondary" onclick = "createICS( '{{ starts_on }}', '{{ ends_on }}', '{{ subject }}', '{{ meeting_link }}')">Download ics file</button>
-<button class="btn btn-secondary" onclick = "addEventToGoogleCalendar('{{ subject }}', '{{ meeting_link }}', '{{ starts_on }}', '{{ ends_on }}');
+<button class="btn btn-secondary" onclick = "createICS( '{{ starts_on }}', '{{ ends_on }}', '{{ subject | replace('\n', ' ') }}', '{{ meeting_link }}')">Download ics file</button>
+<button class="btn btn-secondary" onclick = "addEventToGoogleCalendar('{{ subject | replace('\n', ' ') }}', '{{ meeting_link }}', '{{ starts_on }}', '{{ ends_on }}');
 ">Add event to calendar</button>
 
 <div class="row">
