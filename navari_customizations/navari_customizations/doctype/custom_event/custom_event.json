@@ -14,6 +14,7 @@
   "event_type",
   "event_location",
   "meeting_link",
+  "event_registration",
   "column_break_dzc3u",
   "starts_on",
   "ends_on",
@@ -131,12 +132,17 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Description"
+  },
+  {
+   "fieldname": "event_registration",
+   "fieldtype": "Data",
+   "label": "Event Registration"
   }
  ],
  "has_web_view": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2023-05-01 10:02:48.059949",
+ "modified": "2023-05-19 23:28:32.082862",
  "modified_by": "Administrator",
  "module": "Navari Customizations",
  "name": "Custom Event",
