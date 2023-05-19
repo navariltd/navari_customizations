@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-21 16:36:03.474108",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "contact_number",
+  "email_address",
+  "column_break_9eozu",
+  "designation",
+  "company",
+  "where_do_you_stand_with_erps",
+  "section_break_ym8ts",
+  "what_do_you_want_to_take_away_from_this_webinar",
+  "section_break_dwyfe",
+  "what_would_you_like_to_see_in_the_next_webinar",
+  "section_break_lywfg",
+  "event_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Email Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9eozu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "where_do_you_stand_with_erps",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Where do you stand with ERPs?",
+   "options": "\nExploring ERPs\nEvaluating ERPNext\nAlready an ERPNext User\nPromoting ERPNext",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ym8ts",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "what_do_you_want_to_take_away_from_this_webinar",
+   "fieldtype": "Small Text",
+   "label": "What do you want to take away from this webinar?"
+  },
+  {
+   "fieldname": "section_break_dwyfe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "what_would_you_like_to_see_in_the_next_webinar",
+   "fieldtype": "Small Text",
+   "label": "What would you like to see in the next webinar?"
+  },
+  {
+   "fieldname": "section_break_lywfg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "ERPNext-Opensource-Solutions-for-Today-and-Beyond",
+   "fieldname": "event_name",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Event Name",
+   "options": "Custom Event"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-19 22:53:21.351214",
+ "modified_by": "Administrator",
+ "module": "Navari Customizations",
+ "name": "Event Registration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
