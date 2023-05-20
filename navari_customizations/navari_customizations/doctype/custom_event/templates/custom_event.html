@@ -10,7 +10,7 @@
     <p>{{ description }}</p>
 </div>
 
-<a class="btn btn-primary" href = '{{event_registration}}'>Register</a>
+<a class="btn btn-primary" href = '{{ event_registration }}'>Register</a>
 <button class="btn btn-secondary" onclick = "createICS( '{{ starts_on }}', '{{ ends_on }}', '{{ subject | replace('\n', ' ') }}', '{{ meeting_link }}')">Download ics file</button>
 <button class="btn btn-secondary" onclick = "addEventToGoogleCalendar('{{ subject | replace('\n', ' ') }}', '{{ meeting_link }}', '{{ starts_on }}', '{{ ends_on }}');
 ">Add event to calendar</button>

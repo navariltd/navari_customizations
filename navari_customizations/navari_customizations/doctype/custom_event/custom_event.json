@@ -28,7 +28,8 @@
   "speaker_company",
   "section_break_rzsok",
   "route",
-  "is_published"
+  "is_published",
+  "amended_from"
  ],
  "fields": [
   {
@@ -134,6 +135,15 @@
    "label": "Description"
   },
   {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Custom Event",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
    "fieldname": "event_registration",
    "fieldtype": "Data",
    "label": "Event Registration"
@@ -141,8 +151,9 @@
  ],
  "has_web_view": 1,
  "is_published_field": "is_published",
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-05-19 23:28:32.082862",
+ "modified": "2023-05-20 13:58:38.212735",
  "modified_by": "Administrator",
  "module": "Navari Customizations",
  "name": "Custom Event",
