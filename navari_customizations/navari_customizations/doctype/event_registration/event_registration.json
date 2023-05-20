@@ -92,7 +92,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "ERPNext-Opensource-Solutions-for-Today-and-Beyond",
    "fieldname": "event_name",
    "fieldtype": "Link",
    "hidden": 1,
@@ -104,7 +103,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-19 22:53:21.351214",
+ "modified": "2023-05-20 17:03:11.150219",
  "modified_by": "Administrator",
  "module": "Navari Customizations",
  "name": "Event Registration",
