@@ -19,7 +19,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-06-11 18:45:40.057911",
+ "modified": "2023-06-11 18:56:36.965396",
  "modified_by": "Administrator",
  "module": "Navari Customizations",
  "name": "propose-a-talk",
@@ -29,6 +29,8 @@
  "show_attachments": 0,
  "show_list": 0,
  "show_sidebar": 0,
+ "success_message": "We will reach out to you.",
+ "success_title": "Thank you!",
  "title": "Propose a Talk",
  "web_form_fields": [
   {
