@@ -4,7 +4,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
-    background-color: #fff;
+    background-color: #F7F7F7;
 }
 
 h2.section-title {
@@ -24,15 +24,15 @@ section {
 }
 
 .nav-container {
-    background-color: #010001;
+    background-color: #F7F7F7;
     display: flex;
     justify-content: center;
 }
 
 .navbar{
-    background-color: #010001;
-    height: 40px;
-    width: 65%;
+    background-color: #F7F7F7;
+    max-height: 100px;
+    width: 65%; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,12 +42,12 @@ section {
 .logo {
     display: flex;
     align-items: center;
-    color: white;
-    font-size: 18px;
+    color: #BF1F2C;
+    font-weight: 700;
 }
 
 .logo img {
-    height: 30px;
+    height: 60px;
     margin-right: 10px;
 }
 
@@ -56,7 +56,7 @@ section {
 }
 
 .links a {
-    color: white;
+    color: #BF1F2C;
     text-decoration: none;
     margin-right: 20px;
     font-size: 14px;
@@ -64,7 +64,7 @@ section {
 
 .hero-content {
     color: white;
-    background-color: #010001;
+    background-color: #D26673;
     display: flex;
     justify-content: center;
     padding-top: 100px;
@@ -92,6 +92,25 @@ section {
     justify-content: space-around;
 }
 
+.btn-primary {
+    background-color: #BF1F2C;
+    border: none;
+}
+
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.btn-primary.active:focus,
+.btn-primary.active:hover {
+  outline: none;
+  box-shadow: none;
+  background-color: #BF1F2C;
+}
+
+
 .font-size-2xl {
     font-size: 1.3rem;
 }
@@ -114,16 +133,16 @@ section {
 
 .speakers-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .speaker-name {
     font-size: 1.3rem;
-    color: #2A92F0;
+    color: #D26673;
 }
 
 .sponsor-callout, .about-us {
-    border: 1px solid #2A92F0;
+    border: 1px solid #D26673;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -139,8 +158,14 @@ section {
     font-size: 1.3rem;
 }
 
+.partner-logo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 @media (max-width: 768px) {
-  .speakers-box {
+  .speakers-box, .partner-logo {
     flex-direction: column;
     align-items: center;
   }
