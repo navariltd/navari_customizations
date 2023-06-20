@@ -160,8 +160,40 @@ section {
 
 .partner-logo {
     display: flex;
-    justify-content: space-between;
     width: 100%;
+    margin-bottom: 15px;
+}
+
+.faq-section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.faq-answer.show {
+    display: block;
+}
+
+.countdown {
+    font-size: 24px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
