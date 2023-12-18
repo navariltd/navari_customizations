@@ -14,10 +14,11 @@
 </head>
 
 <body class="bg-gray-300 container-sm min-w-min px-1">
-    <header class="bg-gray-900 text-white py-6 sticky top-0 rounded-md">
+    <header
+        class="min-[280px]:max-md:flex min-[280px]:max-md:flex-row min-[280px]:max-md:justify-evenly md:sticky bg-gray-800 text-white py-6 top-0 rounded-md">
         <div class="flex justify-around items-center">
-            <a href="https://navari.co.ke" class="logo"><img src="Assets/Navari.png" alt="Logo"></a>
-            <nav class="text-md text-gray-500">
+            <a href="https://navari.co.ke" class="logo"><img src="Assets/NavariLogoWhite.png" alt="Logo"></a>
+            <nav class="navbar flex flex-col md:flex-row h-36 md:h-12 text-md text-gray-500 hidden md:block">
                 <a href="#faq" class="px-6 py-2 text-white hover:bg-gray-700">FAQs</a>
                 <a href="https://navari.co.ke/about/" class="px-6 py-2 text-white hover:bg-gray-700">About</a>
                 <a href="https://navari.co.ke/contact/" class="px-6 py-2 text-white hover:bg-gray-700">Contact Us</a>
@@ -25,123 +26,159 @@
                     class="px-6 py-2 text-white hover:bg-gray-700">Register</a>
             </nav>
         </div>
+        <button class="md:hidden px-2 py-2 text-white hover:bg-gray-700 navbar-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
     </header>
 
+
     <main>
-        <section class="flex flex-col items-center justify-around mx-auto bg-red-500 h-96 rounded-md">
-            <h2 class="mt-6 text-4xl font-bold text-white">Think Beyond</h2>
+        <section class="flex flex-col items-center bg-red-500 rounded-md h-auto md:h-96 px-2">
+            <h2 class="mt-6 text-lg md:text-4xl font-bold text-white">
+                <a class="cursor-pointer" href="https://erpnext.com/" target="_blank">ERPNext</a>
+            </h2>
+            <h3 class="mt-6 text-base md:text-3xl font-bold text-white">The Hidden Gem in Enterprise Management
+                Solutions</h3>
 
-            <h3 class="mt-6 text-3xl font-bold text-white">The Frappe and ERPNext Event</h3>
-            <div class="text-2xl font-bold text-white">February, 5<sup>th</sup> 2024</div>
-            <p class="mt-2 text-lg text-white">The Frappe and ERPNext Event with the same spirit and energy</p>
+            <h3 class="mt-6 text-base md:text-2xl font-bold text-white">The <a href="https://frappeframework.com/"
+                    target="_blank" class="cursor-pointer">Frappe</a> and ERPNext Local Event Nairobi,
+                Kenya</h3>
+            <h3 class="mt-6 text-base md:text-2xl font-bold text-white">February, 5<sup>th</sup> 2024</h3>
+            <p class="mt-2 text-lg md:text-lg text-white">The Frappe and ERPNext Event with the same spirit and energy
+            </p>
 
-            <div>
+            <div class="mt-4">
                 <button type="button" onclick="location.href='https://conference.navari.co.ke/conference-registration'"
-                    class="bg-red-600 text-white font-bold py-2 px-4 rounded"
+                    class="bg-red-600 text-white font-bold py-2 px-4 rounded-md"
                     style="flex: 1; margin: 0px 5px; min-width: 150px;">Register</button>
                 <button type="button" onclick="location.href='https://conference.navari.co.ke/propose-a-talk'"
-                    class="bg-gray-500 text-white font-bold py-2 px-4 rounded"
+                    class="bg-gray-500 text-white font-bold py-2 px-4 rounded-md"
                     style="flex: 1; margin: 0px 5px; min-width: 150px;">Propose a Talk</button>
             </div>
-            <div class="mt-6 text-4md font-bold text-white" id="countdown"></div>
+            <div class="mt-4 text-4md font-bold text-white" id="countdown"></div>
         </section>
 
-        <section class="flex flex-col items-center mx-auto mt-6">
+        <section class="flex flex-col items-center mt-6">
             <div class="overflow-x-auto">
-                <div class="flex items-center justify-around font-bold text-3xl text-blue-500">Schedule</div>
-                <table>
+                <div class="flex items-center justify-around font-bold text-base md:text-3xl text-blue-500">Schedule
+                    (Tentative)
+                </div>
+                <table class="table-auto">
                     <tbody>
                         <tr>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">9:00 AM</td>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">Registration and Arrival</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">9:00 AM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">Registration and Arrival</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">10:00 AM</td>
-                            <td class="px-6 py-4 text-left text-md text-gray-700 flex items-center">
+                            <td class="px-6 py-4 text-left text-base text-gray-700">10:00 AM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700 flex items-center">
                                 <img src="Assets/Brian.png" alt="Speaker Image" height="50px" width="50px"
                                     class="rounded-full mr-2">
                                 Welcome Speech and Introductions<br>
-                                Brian Njogu, Anne Gathoni
+                                Brian Njogu, Prisca Kibagendi
                             </td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">10:30 AM</td>
-                            <td class="px-6 py-4 text-left text-md text-gray-700 flex items-center">
+                            <td class="px-6 py-4 text-left text-base text-gray-700">10:30 AM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700 flex items-center">
                                 <img src="Assets/Rushabh.png" alt="Speaker Image" height="50px" width="50px"
                                     class="rounded-full mr-2">
-                                Keynote Speaker<br>
-                                Muchai Gateru, Rushabh Mehta
+                                Frappe, Frappeverse & Open-source philosophy
+                                <br>
+                                Rushabh Mehta
                             </td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">11:30 AM</td>
-                            <td class="px-6 py-4 text-left text-md text-gray-700 flex items-center">
+                            <td class="px-6 py-4 text-left text-base text-gray-700">11:30 AM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700 flex items-center">
                                 <img src="Assets/Ankita.png" alt="Speaker Image" height="50px" width="50px"
                                     class="rounded-full mr-2">
-                                Guest Speaker<br>
-                                Ankita
+                                ERPNext - The hidden gem in Enterprise Management Solutions
+                                <br>
+                                Ankita Roychoudhury
                             </td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">12:00 PM</td>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">Tea Break</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">12:00 PM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700 flex items-center">
+                                <img src="Assets/Hussain.png" alt="Speaker Image" height="50px" width="50px"
+                                    class="rounded-full mr-2">
+                                Build With Hussain
+                                <br />
+                                Hussain Nagaria
+                            </td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">12:15 PM</td>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">Exhibition</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">12:15 PM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700 flex items-center">
+                                <img src="Assets/Muchai.png" alt="Speaker Image" height="50px" width="50px"
+                                    class="rounded-full mr-2">
+                                Country Specific Enhancements: Mpesa Integration, KRA eTIMS Integration
+                                <br />
+                                Muchai Gateru, Lucky Tsuma, Okeyo Mayaka
+                            </td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">1:00 PM</td>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">Lunch Break</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">13:00 PM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">Lunch Break</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">1:45 PM</td>
-                            <td class="px-6 py-4 text-left text-md text-gray-700 flex items-center">
+                            <td class="px-6 py-4 text-left text-base text-gray-700">13:45 PM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700 flex items-center">
                                 <img src="Assets/Mburu.png" alt="Speaker Image" height="50px" width="50px"
                                     class="rounded-full mr-2">
-                                Speeches<br>
-                                Charles Mburu, Steven Koros,
-                                <br>
-                                Lucky Tsuma, Rebecca Cheptoek
+                                More Frappe and ERPNext Talks<br>
+                                Navari Team Members/Community Members
                             </td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">2.45 PM</td>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">Q&A Session with Panelist</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">14.45 PM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">Customer experience/stories</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">4.00 PM</td>
-                            <td class="px-6 py-4 text-left text-md text-gray-700">Summary and Networking</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">15.00 PM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">Questions and Answers</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">15.30 PM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">One on one sessions with prospects
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">16.00 PM</td>
+                            <td class="px-6 py-4 text-left text-base text-gray-700">General networking and discussions
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
         <section class="flex flex-col items-center">
-            <div class="sponsor-callout flex flex-col container justify-around border-solid border-2 border-red-300 rounded-md px-2 mb-2"
-                style="min-width: 100px;">
+            <div
+                class="sponsor-callout flex flex-col container justify-around border-solid border-2 border-red-300 rounded-md px-2 mb-2 min-w-min">
                 <h2 class="text-3xl text-blue-500 font-bold mt-2">Sponsors</h2>
-                <div>We’re always looking for supporters to help us</div>
-                <div>throw the biggest open-source Event of the</div>
-                <div>year.</div>
+                <div>We could use supporters to help us in facilitating the event</div>
 
-                <div class="my-4">
-                    <a class="bg-gray-500 text-white font-bold py-2 px-4 rounded"
+                <div class="flex flex-col md:flex-row my-4">
+                    <a class="text-center bg-gray-500 text-white font-bold py-2 px-4 mx-2 rounded-md md:w-80"
                         href="https://conference.navari.co.ke/become-a-sponsor/">Become a Sponsor</a>
-                    <a href="Assets/Sponsorship Package.pdf"
-                        class="bg-blue-500 text-white font-bold py-2 px-4 rounded" download>
-                        View Sponsorship Packages
+                    <a class="text-center bg-blue-500 text-white font-bold py-2 px-4 mx-2 rounded-md md:w-80"
+                        href="Assets/Sponsorship Package.pdf" download>
+                        Sponsorship Packages
                     </a>
                 </div>
             </div>
         </section>
         <section class="flex flex-col items-center justify-around">
-            <div class="about-us flex flex-col container justify-around border-solid border-2 border-red-300 rounded-md px-2 mb-2"
-                style="min-width: 100px;">
+            <div
+                class="about-us flex flex-col container justify-around border-solid border-2 border-red-300 rounded-md px-2 mb-2 min-w-min">
                 <h2 class="text-3xl text-blue-500 font-bold mt-2">About Us</h2>
                 <div class="partner-logo">
                     <div class="logo px-6" style="flex: 1;">
-                        <a href="https://frappe.io/"><img src="Assets/frappe_blue.png" alt="Frappe ogo"></a>
+                        <a href="https://frappe.io/"><img src="Assets/frappe-logo.png" alt="Frappe ogo"></a>
                     </div>
                     <div style="flex: 2">
                         <p>Frappe is a remote technology company committed to building world-class open-source
@@ -152,30 +189,16 @@
 
                 <div class="partner-logo">
                     <div class="logo px-6" style="flex: 1;">
-                        <a href="https://navari.co.ke"><img src="Assets/Navari.png" alt="Navari logo"
+                        <a href="https://navari.co.ke"><img src="Assets/NewNavariLogo.PNG" alt="Navari logo"
                                 style="height: 140px;"></a>
                     </div>
                     <div style="flex: 2">
                         <p>
-                            Navari is the first ERPNext Frappe Partner in Kenya, and has more than 25 clients
-                            running on ERPNext. As a <b>Frappe Certifield Partner, </b>Navari provides ERPNext
-                            implementation and customization services, business process analysis and mapping,
-                            systems integration, technical delivery experience and innovation to deliver value and
-                            innovation on ERPNext, with a focus on ERP Solutions for Small and mid-sized
-                            enterprises.<br>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="partner-logo">
-                    <div class="logo px-6" style="flex: 1;">
-                        <a href="https://erpchampions.com/"><img src="Assets/erpchampions-logo.png"
-                                alt="Erpchampions logo"></a>
-                    </div>
-                    <div style="flex: 2;">
-                        <p>
-                            Erpchampions is Uganda's premier <b>Frappe Certified Partner</b>. They expertly
-                            implement ERPNext solutions for businesses.
+                            Navari is the first ERPNext Frappe Partner in Kenya, and has 30+ clients running on ERPNext.
+                            Navari founders were at the core of the very first <a href="https://www.sap.com/"
+                                class="cursor-help" target="_blank">SAP</a>
+                            and Microsoft Dynamics
+                            implementations in the region.<br>
                         </p>
                     </div>
                 </div>
@@ -195,7 +218,7 @@
                 <div class="faq-item">
                     <div class="faq-question" onclick=toggleAnswer(this)>Who are the speakers?</div>
                     <div class="faq-answer">We will have speakers from Frappe Technologies as well as Frappe Certified
-                        Partners(Navari, and ERPChampions)</div>
+                        Partners</div>
                 </div>
         </section>
     </main>
@@ -232,6 +255,17 @@
     }
 
     window.addEventListener('scroll', handleScroll);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.querySelector('.navbar');
+        const navbarToggle = document.querySelector('.navbar-toggle');
+
+        navbarToggle.addEventListener('click', () => {
+            navbar.classList.toggle('hidden');
+            navbarToggle.classList.toggle("show");
+        });
+    });
+
 </script>
 
 </html>
