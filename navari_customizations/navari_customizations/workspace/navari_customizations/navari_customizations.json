@@ -1,0 +1,70 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"Pg-l9cthza\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Navari Customizations</span>\",\"col\":12}},{\"id\":\"DSRB4Yah92\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Event Registration\",\"col\":3}},{\"id\":\"3whPicp0o4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Custom Event\",\"col\":3}},{\"id\":\"U8oG648wM9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Talk Proposal\",\"col\":3}},{\"id\":\"okIYlGKvRv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sponsor Registration\",\"col\":3}},{\"id\":\"qglokImTd7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Conference Registration\",\"col\":3}}]",
+ "creation": "2026-01-19 23:25:31.989383",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "milestone",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Navari Customizations",
+ "links": [],
+ "modified": "2026-01-19 23:34:26.243446",
+ "modified_by": "Administrator",
+ "module": "Navari Customizations",
+ "name": "Navari Customizations",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 50.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Event Registration",
+   "link_to": "Event Registration",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Custom Event",
+   "link_to": "Custom Event",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Talk Proposal",
+   "link_to": "Talk Proposal",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Sponsor Registration",
+   "link_to": "Sponsor Registration",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Conference Registration",
+   "link_to": "Conference Registration",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Navari Customizations"
+}
