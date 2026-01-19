@@ -1,0 +1,89 @@
+{
+  "app": "navari_customizations",
+  "creation": "2026-01-19 22:56:15.644778",
+  "docstatus": 0,
+  "doctype": "Workspace Sidebar",
+  "header_icon": "rotate-3d",
+  "idx": 0,
+  "items": [
+    {
+      "child": 0,
+      "collapsible": 1,
+      "icon": "home",
+      "indent": 0,
+      "keep_closed": 0,
+      "label": "Home",
+      "link_to": "Navari Customizations",
+      "link_type": "Workspace",
+      "show_arrow": 0,
+      "type": "Link"
+    },
+    {
+      "child": 0,
+      "collapsible": 1,
+      "icon": "notebook",
+      "indent": 0,
+      "keep_closed": 0,
+      "label": "Event Registration",
+      "link_to": "Event Registration",
+      "link_type": "DocType",
+      "show_arrow": 0,
+      "type": "Link"
+    },
+    {
+      "child": 0,
+      "collapsible": 1,
+      "icon": "money-coins-1",
+      "indent": 0,
+      "keep_closed": 0,
+      "label": "Sponsor Registration",
+      "link_to": "Sponsor Registration",
+      "link_type": "DocType",
+      "show_arrow": 0,
+      "type": "Link"
+    },
+    {
+      "child": 0,
+      "collapsible": 1,
+      "icon": "notebook-text",
+      "indent": 0,
+      "keep_closed": 0,
+      "label": "Conference Registration",
+      "link_to": "Conference Registration",
+      "link_type": "DocType",
+      "show_arrow": 0,
+      "type": "Link"
+    },
+    {
+      "child": 0,
+      "collapsible": 1,
+      "icon": "notebook-pen",
+      "indent": 0,
+      "keep_closed": 0,
+      "label": "Talk Proposal",
+      "link_to": "Talk Proposal",
+      "link_type": "DocType",
+      "show_arrow": 0,
+      "type": "Link"
+    },
+    {
+      "child": 0,
+      "collapsible": 1,
+      "icon": "house-plus",
+      "indent": 0,
+      "keep_closed": 0,
+      "label": "Custom Event",
+      "link_to": "Custom Event",
+      "link_type": "DocType",
+      "show_arrow": 0,
+      "type": "Link"
+    }
+  ],
+  "modified": "2026-01-19 23:47:04.781585",
+  "modified_by": "Administrator",
+  "module": "Navari Customizations",
+  "name": "Navari Customizations",
+  "owner": "Administrator",
+  "standard": 1,
+  "title": "Navari Customizations"
+}

@@ -1,0 +1,20 @@
+{
+ "app": "navari_customizations",
+ "creation": "2026-01-19 23:48:55.716759",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_type": "App",
+ "idx": 0,
+ "label": "Navari Customizations",
+ "link": "/desk/navari-customizations",
+ "link_type": "External",
+ "logo_url": "/assets/navari_customizations/images/navari_customizations.svg",
+ "modified": "2026-01-19 23:48:55.716759",
+ "modified_by": "Administrator",
+ "name": "Navari Customizations",
+ "owner": "Administrator",
+ "restrict_removal": 0,
+ "roles": [],
+ "standard": 1
+}
