@@ -1,0 +1,196 @@
+{% extends "templates/web.html" %} {% block title %}Quality Feedback{% endblock
+%} {% block page_content %}
+
+<input type="hidden" id="route_id" value="{{ route_id }}" />
+
+<div class="nv-page {% if is_submitted %}nv-readonly{% endif %}">
+  <div class="nv-hero">
+    <div>
+      <div class="nv-badge">
+        <span class="nv-badge-dot"></span>
+        Feedback Form
+      </div>
+      <h1 class="nv-hero-title">Rate Each Parameter</h1>
+      <p class="nv-hero-sub">
+        Share your feedback to help us improve our service delivery
+      </p>
+    </div>
+
+    <div class="nv-action-group">
+      <button id="theme-toggle" class="nv-theme-btn" aria-label="Toggle Theme">
+        <svg
+          class="theme-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M12 2V4M12 20V22M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07M2 12H4M20 12H22M6.34 17.66L4.93 19.07M19.07 4.93L17.66 6.34M12 7C9.24 7 7 9.24 7 12C7 14.76 9.24 17 12 17C14.76 17 17 14.76 17 12C17 9.24 14.76 7 12 7Z"
+          />
+        </svg>
+      </button>
+
+      {% if not is_submitted %}
+      <div class="nv-progress-pill">
+        <div class="nv-progress-header">
+          <div class="nv-prog-label">PROGRESS</div>
+          <div class="nv-prog-nums">
+            <span class="nv-prog-count" id="rated-count">0</span>
+            <span class="nv-prog-total">/{{ parameters|length }} rated</span>
+          </div>
+        </div>
+        <div class="nv-prog-bar-wrap">
+          <div class="nv-prog-bar" id="progress-bar"></div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if is_submitted %}
+  <div class="nv-submitted-banner">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      width="20"
+      height="20"
+    >
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <div>
+      <strong>Already Submitted</strong>
+      <p>
+        This feedback has already been successfully recorded and cannot be
+        modified.
+      </p>
+    </div>
+  </div>
+  {% endif %} {% if description %}
+  <div class="nv-prompt-card">
+    <div class="nv-prompt-content">{{ description }}</div>
+  </div>
+  {% endif %}
+
+  <div class="nv-desc-banner">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      width="16"
+      height="16"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+      <line x1="9" y1="9" x2="15" y2="9"></line>
+      <line x1="9" y1="13" x2="15" y2="13"></line>
+      <line x1="9" y1="17" x2="13" y2="17"></line>
+    </svg>
+    <span
+      >Navari Limited Customer Feedback · Please rate honestly to help us serve
+      you better.</span
+    >
+  </div>
+
+  <div class="nv-grid">
+    {% for p in parameters %}
+    <div
+      class="nv-card {% if is_submitted or p.rating %}completed{% endif %}"
+      data-index="{{ loop.index0 }}"
+    >
+      <div class="nv-card-top">
+        <div class="nv-card-num">{{ loop.index }}</div>
+        <div class="nv-card-title">{{ p.parameter }}</div>
+        <div class="nv-card-status-dot"></div>
+      </div>
+
+      <div class="nv-stars" data-value="{{ p.rating or 0 }}">
+        {% for i in range(1,6) %}
+        <button
+          type="button"
+          class="nv-star {% if p.rating and i <= p.rating|int %}lit{% endif %}"
+          data-value="{{ i }}"
+          aria-label="Rate {{ i }} out of 5"
+          {%
+          if
+          is_submitted
+          %}disabled{%
+          endif
+          %}
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+            />
+          </svg>
+        </button>
+        {% endfor %}
+      </div>
+
+      <div class="nv-rating-label">
+        {% if p.rating %} {{ p.rating }} / 5 {% else %} Tap to rate {% endif %}
+      </div>
+
+      <textarea
+        class="nv-textarea"
+        placeholder="Optional: share specific feedback..."
+        {%
+        if
+        is_submitted
+        %}disabled{%
+        endif
+        %}
+      >
+{{ p.feedback or '' }}</textarea
+      >
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if not is_submitted %}
+  <div class="nv-footer">
+    <div class="nv-footer-info">
+      <div class="nv-lock-icon">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          width="16"
+          height="16"
+        >
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </div>
+      <span
+        >Your feedback is <strong>confidential</strong> and used for service
+        improvement only.</span
+      >
+    </div>
+    <button class="nv-submit-btn" onclick="submitFeedback()">
+      Submit Feedback
+    </button>
+  </div>
+  {% endif %}
+</div>
+
+<div id="overlay" class="nv-overlay hidden">
+  <div class="nv-overlay-card">
+    <div class="nv-spinner"></div>
+    <div class="nv-overlay-text">Submitting Feedback...</div>
+  </div>
+</div>
+
+{% endblock %}
