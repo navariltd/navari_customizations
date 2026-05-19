@@ -29,7 +29,7 @@ app_license = "GNU General Public License (v3)"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Task": "overrides/task.js", "Quality Feedback": "overrides/quality_feedback.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -103,32 +103,37 @@ app_license = "GNU General Public License (v3)"
 # Hook on document methods and events
 
 # doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
+# "*": {
+# "on_update": "method",
+# "on_cancel": "method",
+# "on_trash": "method"
 # }
+# }
+doc_events = {
+	"Quality Feedback": {
+		"before_validate": "navari_customizations.overrides.quality_feedback.before_validate",
+	},
+}
 
 # Scheduled Tasks
 # ---------------
 
 # scheduler_events = {
-#	"all": [
-#		"navari_customizations.tasks.all"
-#	],
-#	"daily": [
-#		"navari_customizations.tasks.daily"
-#	],
-#	"hourly": [
-#		"navari_customizations.tasks.hourly"
-#	],
-#	"weekly": [
-#		"navari_customizations.tasks.weekly"
-#	],
-#	"monthly": [
-#		"navari_customizations.tasks.monthly"
-#	],
+# "all": [
+# "navari_customizations.tasks.all"
+# ],
+# "daily": [
+# "navari_customizations.tasks.daily"
+# ],
+# "hourly": [
+# "navari_customizations.tasks.hourly"
+# ],
+# "weekly": [
+# "navari_customizations.tasks.weekly"
+# ],
+# "monthly": [
+# "navari_customizations.tasks.monthly"
+# ],
 # }
 
 # Testing
